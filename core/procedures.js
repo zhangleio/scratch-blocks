@@ -443,6 +443,11 @@ Blockly.Procedures.editProcedureCallback_ = function (block) {
     var xmlDom = Blockly.Xml.workspaceToDom(block.workspace);
     var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
     console.log(xmlText)
+    console.log('procedures_definition')
+    console.log(Blockly.Blocks['procedures_definition'])
+    console.log('procedures_call')
+    console.log(Blockly.Blocks['procedures_call'])
+    
   }
   // Edit can come from one of three block types (call, define, prototype)
   // Normalize by setting the block to the prototype block for the procedure.
