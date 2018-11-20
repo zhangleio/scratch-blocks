@@ -438,7 +438,12 @@ Blockly.Procedures.createProcedureCallbackFactory_ = function(workspace) {
  * @param {!Blockly.Block} block The block that was right-clicked.
  * @private
  */
-Blockly.Procedures.editProcedureCallback_ = function(block) {
+Blockly.Procedures.editProcedureCallback_ = function (block) {
+  if (block.workspace) {
+    var xmlDom = Blockly.Xml.workspaceToDom(block.workspace);
+    var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+    console.log(xmlText)
+  }
   // Edit can come from one of three block types (call, define, prototype)
   // Normalize by setting the block to the prototype block for the procedure.
   if (block.type == Blockly.PROCEDURES_DEFINITION_BLOCK_TYPE) {
