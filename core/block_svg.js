@@ -655,8 +655,9 @@ Blockly.BlockSvg.prototype.onMouseDown_ = function(e) {
 Blockly.BlockSvg.prototype.showHelp_ = function() {
   var url = goog.isFunction(this.helpUrl) ? this.helpUrl() : this.helpUrl;
   if (url) {
+    window.open(url);
     // @todo rewrite
-    alert(url);
+    //alert(url);
   }
 };
 
@@ -686,6 +687,7 @@ Blockly.BlockSvg.prototype.showContextMenu_ = function(e) {
     this.parentBlock_.showContextMenu_(e);
     return;
   }
+  menuOptions.push(Blockly.ContextMenu.blockHelpOption(block));
 
   // Allow the block to add or modify menuOptions.
   if (this.customContextMenu) {
