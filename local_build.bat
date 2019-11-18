@@ -1,7 +1,12 @@
 @echo off
 rem author: leio
 rem date: 2019/11/5
-rem desc: first npm install . 
+rem desc: first npm install .
+
+rem compilation_levels: https://developers.google.com/closure/compiler/docs/compilation_levels
+rem Flags-and-Options: https://github.com/google/closure-compiler/wiki/Flags-and-Options
+
+rem --formatting PRETTY_PRINT ^
 
 set compiler=node_modules/google-closure-compiler/compiler.jar
 set closure_library=node_modules/google-closure-library
